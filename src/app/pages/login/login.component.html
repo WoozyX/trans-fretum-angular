@@ -1,0 +1,19 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <form (ngSubmit)="submit()" [formGroup]="login" #formDir="ngForm" style="height:150px">
+        <label for="nomeId">Nome do Usuário</label><br>
+        <input type="text" name="Nome" id="nomeId" formControlName="nome"><br>
+        <div *ngIf="nome.invalid && formDir.submitted" class="text-danger">
+            <p>O nome é obrigatório</p>
+        </div>
+        <label for="nomeId">Senha</label><br>
+        <input type="password" name="Senha" id="senhaId" formControlName="senha"><br>
+        <div *ngIf="nome.invalid && formDir.submitted" class="text-danger">
+            <p>A senha é obrigatório</p>
+        </div>
+
+        <input type="submit" class="btn btn-success position-relative top-50 start-50 translate-middle" value="Entrar">
+        
+    </form>
+</div>
+
+    
